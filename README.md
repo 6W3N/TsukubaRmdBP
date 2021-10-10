@@ -4,14 +4,13 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of TsukubaRmdBP is to ...
+TsukubaRmdBP help you write MT or DT in Tsukuba Univ. Biological Program.
 
 ## Installation
 
-You can install the released version of TsukubaRmdBP from [CRAN](https://CRAN.R-project.org) with:
-
+You can install the released version of TsukubaRmdBP from 
 ``` r
-install.packages("TsukubaRmdBP")
+remotes::install_github("6W3N/TsukubaRmdBP")
 ```
 
 ## Example
