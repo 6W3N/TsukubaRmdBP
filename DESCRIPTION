@@ -14,5 +14,3 @@ Imports:
     rmarkdown,
     stringr,
     rticles
-Remotes: 
-    ykunisato/jpaRmd
