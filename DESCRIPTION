@@ -1,10 +1,10 @@
 Package: TsukubaRmdBP
 Type: Package
-Title: Rmarkdown template for thesis format at Department of Psychology, Senshu University
-Version: 0.7.3
-Author: Yoshihiko Kunisato
-Maintainer: Yoshihiko Kunisato <ykunisato@psy.senshu-u.ac.jp>
-Description: Rmarkdown template for thesis format at Department of Psychology, Senshu University.
+Title: Rmarkdown template for thesis format at Biological Program, Univ. Tsukuba
+Version: 0.0.1
+Author: Wataru Mukaimine
+Maintainer: Wataru Mukaimine <mw.bioeco@gmail.com>
+Description: Rmarkdown template for thesis format at Biological Program, Univ. Tsukuba
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
