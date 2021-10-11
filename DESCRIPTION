@@ -1,18 +1,19 @@
-Package: TsukubaRmdBP
+Package: senshuRmd
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.0.1
-Author: Wataru Mukaimine
-Maintainer: Wataru Mukaimine <mw.bioeco@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Title: Rmarkdown template for thesis format at Department of Psychology, Senshu University
+Version: 0.7.3
+Author: Yoshihiko Kunisato
+Maintainer: Yoshihiko Kunisato <ykunisato@psy.senshu-u.ac.jp>
+Description: Rmarkdown template for thesis format at Department of Psychology, Senshu University.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
-    jpaRmd,
     rmarkdown,
+    jpaRmd,
     rstudioapi,
     stringr
+Remotes: 
+    ykunisato/jpaRmd
