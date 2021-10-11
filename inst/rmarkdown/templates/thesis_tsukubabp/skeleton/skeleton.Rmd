@@ -27,7 +27,7 @@ output: TsukubaRmdBP::tsukuba_format
 # Introduction
 
 This template demonstrates some of the basic latex you'll need to know to create a MT or DT in Tsukuba Univ. BP.
-(RMarkdown Cook Book)[https://bookdown.org/yihui/rmarkdown-cookbook/] will answer the almost question you have.
+[RMarkdown Cook Book](https://bookdown.org/yihui/rmarkdown-cookbook/) will answer the almost question you have.
 
 
 \section{Verifications}
