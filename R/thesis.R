@@ -15,3 +15,4 @@ tsukuba_thesis  <- function(Rmd_file, Bib_file) {
   format_pdf$inherits <- "pdf_document"
   format_pdf
 }
+

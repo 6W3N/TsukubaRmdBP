@@ -26,7 +26,7 @@ output: senshuRmd::senshu_thesis
 
 # Introduction
 
-This template demonstrates some of the basic latex you'll need to know to create a ASA article.
+This template demonstrates some of the basic latex you'll need to know to create a MT or DT in Tsukuba Univ. BP.
 
 \section{Verifications}
 \label{sec:verify}
