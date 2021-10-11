@@ -21,7 +21,7 @@ abstract: |
 
 bibliography: bibliography.bib
 # output: rticles::asa_article
-output: senshuRmd::senshu_thesis
+output: TsukubaRmdBP::tsukuba_format
 ---
 
 # Introduction
