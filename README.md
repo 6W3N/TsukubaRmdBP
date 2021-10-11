@@ -1,16 +1,16 @@
 # TsukubaRmdBP
 
-TsukubaRmdBP help you write MT or DT in Tsukuba Univ. Biological Program.
+TsukubaRmdBP help you write Master or Doctor Thesis in Tsukuba Univ. Doctoral Program in Biology.
 
 ## Installation
 
-You can install the released version of TsukubaRmdBP from 
+You can install the TsukubaRmdBP from 
 
 ``` r
 remotes::install_github("6W3N/TsukubaRmdBP")
 ```
 
-## Use template
+## How to use the template
 
 1. Open RStudio.
 2. Type and run `remotes::install_github("6W3N/TsukubaRmdBP")` in Console.
