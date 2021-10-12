@@ -4,9 +4,9 @@ title: Title here
 # to produce blinded version set to 1
 blinded: 0
 
-authors: 
-- name: Taro Tsukuba
-  affiliation: Department of YYY, University of XXX
+authors: Taro Tsukuba
+# - name: Taro Tsukuba
+#   affiliation: Department of YYY, University of XXX
 
 keywords:
 - 3 to 6 keywords
