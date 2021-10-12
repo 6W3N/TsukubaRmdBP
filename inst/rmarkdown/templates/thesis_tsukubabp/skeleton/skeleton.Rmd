@@ -1,12 +1,9 @@
 ---
 title: Title here
 
-# to produce blinded version set to 1
 blinded: 0
 
 authors: Taro Tsukuba
-# - name: Taro Tsukuba
-#   affiliation: Department of YYY, University of XXX
 
 keywords:
 - 3 to 6 keywords
@@ -17,9 +14,6 @@ abstract: |
 
 bibliography: bibliography.bib
 output: TsukubaRmdBP::tsukuba_format
-  # :
-  #     includes:
-  #     in_header: preamble.tex
 ---
 
 \tableofcontents
@@ -74,33 +68,39 @@ The both `\chapter` and `\section` functions provide the numbering sections but 
 
 If you want to add section in the chapter (i.e., Introduction in Chapter 2), then add `\section` function after `\chapter{Chapter 2}` like below.
 
-\section{Introduction in Chapter 2}
+\section{Introduction to include figures and tables}
 
 You can use figures and tables using markdown notation or R chunk.
 
+We can create figures from R chunk. Also by setting the file path in LaTeX or markdown notation, you show the figures made by other program, i.e., excel.
 
-```{r cars, fig.cap = "cars plot"}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+\newpage
+```{r cars, echo=FALSE, fig.cap = "cars plot"}
 plot(cars)
 ```
 
-```{r mtcars, fig.cap = "mtcars plot"}
+\newpage
+```{r mtcars, echo=FALSE, fig.cap = "mtcars plot"}
 plot(mpg ~ hp, mtcars)
 ```
 
-```{r iris, echo=FALSE, warning=FALSE, message=FALSE, results="asis", fig.cap="iris summary table"}
-library(tidyverse)
+\newpage
+```{r iris, echo=FALSE, fig.cap = "iris table"}
 iris %>% group_by(Species) %>% 
   summarize(Sepal_Length_Mean=mean(Sepal.Length),
             Sepal_Width_Mean=mean(Sepal.Width)) %>% 
-  as_tibble() %>% 
   knitr::kable()
 ```
 
-`knitr::kable()` is now unusable (please check the issue: https://github.com/rstudio/rticles/issues/93). I will modify the package Tsukubamd BP asap.
+CAUTION: You should insert ALL figures and tables after main documents when finally submission. 
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
-
+The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. 
 
 \chapter*{Acknowledgement}
 The authors gratefully acknowledge ...
