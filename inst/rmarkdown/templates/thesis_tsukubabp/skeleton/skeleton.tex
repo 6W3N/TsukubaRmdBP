@@ -94,10 +94,15 @@
   \medskip
 } \fi
 
-\bigskip
-\begin{abstract}
+\newpage
 
-\end{abstract}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+The text of your abstract. The text of your abstract. The text of your
+abstract. The text of your abstract. The text of your abstract. The text
+of your abstract. The text of your abstract.
+ % abstract: |
+ %  The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract.
 
 \noindent%
 {\it Keywords:} 3 to 6 keywords, that do not appear in the title
@@ -105,6 +110,16 @@
 
 \newpage
 \spacingset{1.45} % DON'T change the spacing!
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
 
 \chapter*{General Introduction}
 \addcontentsline{toc}{chapter}{General Introduction} \parindent=5.3mm
@@ -114,64 +129,95 @@ to create a MT or DT in Tsukuba Univ. BP.
 \href{https://bookdown.org/yihui/rmarkdown-cookbook/}{RMarkdown Cook
 Book} will answer the almost question you have.
 
-\section{Section 1}
-\label{Section1}
+\chapter{Chapter 1 Title}
+\label{Chap1}
 
 This section will be just provide the reference examples. You can add
-references by adding \texttt{@hogehoge} in RMarkdown files .bib file. A
+references by adding \texttt{@hogehoge} in RMarkdown and .bib file. A
 simple way to make a .bib file is to use google scholar(see
 \href{https://digitalmeasures.oregonstate.edu/training/export-bibtex-google-scholar}{here}
 or
 \href{http://ajdkbsuvi.blogspot.com/2011/02/google-scholarbibtex.html}{here}).
+Also \href{https://github.com/crsh/citr}{\texttt{citr}} package help
+you.
 
-Campbell and Austin (2002) Schubert et al. (2013; Chi, Feltovich, and
-Glaser 1981)
+We can use four inline citation styles as belows:
 
-The quick brown fox jumped over the lazy dog. The quick brown fox jumped
-over the lazy dog. The quick brown fox jumped over the lazy dog. The
-quick brown fox jumped over the lazy dog.
+\begin{itemize}
+\tightlist
+\item
+  \texttt{{[}@singlecite{]}}: single citation
+\item
+  \texttt{{[}@cite1;\ @cite2{]}}: multiple citations
+\item
+  \texttt{{[}-@singlecite{]}}: just display the year
+\item
+  \texttt{{[}see\ @cite1\ p\ 12;\ also\ this\ ref\ @cite2{]}}: valid
+  syntax
+\end{itemize}
 
-\section{Section 2}
-\label{Section2}
+We provide the example below. Multicellular organisms are keeping time
+not by one clock but by averaging many independent circadian oscillators
+(Winfree 1975). Our state are consistent with Darwin (2004) and Smith
+and Maynard (1993).
 
-The quick brown fox jumped over the lazy dog. The quick brown fox jumped
-over the lazy dog. The quick brown fox jumped over the lazy dog. The
-quick brown fox jumped over the lazy dog.
+\chapter{Chapter 2 Title}
+\label{Chap2}
+
+This section will provide the \texttt{\textbackslash{}chapter} and
+\texttt{\textbackslash{}section} functions in the RMarkdown file. The
+both \texttt{\textbackslash{}chapter} and
+\texttt{\textbackslash{}section} functions provide the numbering
+sections but this sample RMarkdown files mainly use
+\texttt{\textbackslash{}chapter} for following structure of contents.
+
+\begin{itemize}
+\tightlist
+\item
+  Title
+\item
+  Abstract
+\item
+  List of Tables
+\item
+  List of Figures
+\item
+  General Introduction
+\item
+  Chapter 1
+\item
+  Chapter 2
+\item
+  General Discussion
+\item
+  References
+\end{itemize}
+
+If you want to add section (i.e., Introduction in Chapter 2), then add
+\texttt{\textbackslash{}section} function after
+\texttt{\textbackslash{}chapter\{Chapter\ 2\}}.
+
+Like this.
+
+\section{Introduction in Chapter 2}
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
 
-\section{Verifications}
-\label{sec:verify}
-
-This section will be just long enough to illustrate what a full page of
-text looks like, for margins and spacing.
-
-Campbell and Austin (2002) Schubert et al. (2013; Chi, Feltovich, and
-Glaser 1981)
-
-The quick brown fox jumped over the lazy dog. The quick brown fox jumped
-over the lazy dog. The quick brown fox jumped over the lazy dog. The
-quick brown fox jumped over the lazy dog. \textbf{With this spacing we
-have 30 lines per page.}
+\chapter*{References}
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Campbell02}{}}%
-Campbell, Jamie I. D., and Shauna Austin. 2002. {``Effects of Response
-Time Deadlines on Adults' Strategy Choices for Simple Addition.''}
-\emph{Memory \& Cognition} 30 (6): 988--94.
+\leavevmode\vadjust pre{\hypertarget{ref-darwin2004origin}{}}%
+Darwin, Charles. 2004. \emph{On the Origin of Species, 1859}. Routledge.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Chi81}{}}%
-Chi, Michelene T. H., Paul J. Feltovich, and Robert Glaser. 1981.
-{``Categorization and Representation of Physics Problems by Experts and
-Novices.''} \emph{Cognitive Science} 5 (2): 121--52.
+\leavevmode\vadjust pre{\hypertarget{ref-smith1993theory}{}}%
+Smith, John Maynard, and Smith John Maynard. 1993. \emph{The Theory of
+Evolution}. Cambridge University Press.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Schubert13}{}}%
-Schubert, Christiane C, T Kent Denmark, Beth Crandall, Anna Grome, and
-James Pappas. 2013. {``Characterizing Novice-Expert Differences in
-Macrocognition: An Exploratory Study of Cognitive Work in the Emergency
-Department.''} \emph{Annals of Emergency Medicine} 61 (1): 96--109.
+\leavevmode\vadjust pre{\hypertarget{ref-winfree1975unclocklike}{}}%
+Winfree, Arthur T. 1975. {``Unclocklike Behaviour of Biological
+Clocks.''} \emph{Nature} 253 (5490): 315--19.
 
 \end{CSLReferences}
 

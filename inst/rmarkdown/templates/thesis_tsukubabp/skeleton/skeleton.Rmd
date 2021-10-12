@@ -20,49 +20,68 @@ bibliography: bibliography.bib
 output: TsukubaRmdBP::tsukuba_format
 ---
 
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
+
+
 \chapter*{General Introduction}
 \addcontentsline{toc}{chapter}{General Introduction} \parindent=5.3mm
 
 This template demonstrates some of the basic latex you'll need to know to create a MT or DT in Tsukuba Univ. BP.
 [RMarkdown Cook Book](https://bookdown.org/yihui/rmarkdown-cookbook/) will answer the almost question you have.
 
-\section{Section 1}
-\label{Section1}
+\chapter{Chapter 1 Title}
+\label{Chap1}
 
 This section will be just provide the reference examples.
-You can add references by adding `@hogehoge` in RMarkdown files .bib file. A simple way to make a .bib file is to use google scholar(see [here](https://digitalmeasures.oregonstate.edu/training/export-bibtex-google-scholar) or [here](http://ajdkbsuvi.blogspot.com/2011/02/google-scholarbibtex.html)).
+You can add references by adding `@hogehoge` in RMarkdown and .bib file. A simple way to make a .bib file is to use google scholar(see [here](https://digitalmeasures.oregonstate.edu/training/export-bibtex-google-scholar) or [here](http://ajdkbsuvi.blogspot.com/2011/02/google-scholarbibtex.html)). Also [`citr`](https://github.com/crsh/citr) package help you.
+
+We can use four inline citation styles as belows:
+
+- `[@singlecite]`: single citation
+- `[@cite1; @cite2]`: multiple citations
+- `[-@singlecite]`: just display the year
+- `[see @cite1 p 12; also this ref @cite2]`: valid syntax
+
+We provide the example below. 
+Multicellular organisms are keeping time not by one clock but by averaging many independent circadian oscillators [@winfree1975unclocklike].
+Our state are consistent with @darwin2004origin and @smith1993theory.
+
+\chapter{Chapter 2 Title}
+\label{Chap2}
+
+This section will provide the `\chapter` and `\section` functions in the RMarkdown file. 
+The both `\chapter` and `\section` functions provide the numbering sections but this sample RMarkdown files mainly use `\chapter` for following structure of contents.
+
+- Title
+- Abstract
+- List of Tables
+- List of Figures
+- General Introduction
+- Chapter 1
+- Chapter 2
+- General Discussion
+- References
+
+If you want to add section (i.e., Introduction in Chapter 2), then add `\section` function after `\chapter{Chapter 2}` like belows.
+
+\section{Introduction in Chapter 2}
 
 
-@Campbell02 @Schubert13 [@Chi81]
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-
-\section{Section 2}
-\label{Section2}
-
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
 
 
-\section{Verifications}
-\label{sec:verify}
-This section will be just long enough to illustrate what a full page of
-text looks like, for margins and spacing.
 
-@Campbell02 @Schubert13 [@Chi81]
 
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-The quick brown fox jumped over the lazy dog.
-__With this spacing we have 30 lines per page.__
-
+\chapter*{References}
 
