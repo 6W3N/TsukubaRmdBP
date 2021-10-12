@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage[hyphens]{url} % not crucial - just used below for the URL
 \usepackage{hyperref}
+\usepackage{longtable}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{setspace} % for TsukubaBP
@@ -107,7 +108,6 @@
 \def\spacingset#1{\renewcommand{\baselinestretch}%
 {#1}\small\normalsize} \spacingset{1}
 
-
     \thispagestyle{empty}
     \vspace*{30mm}
     \begin{center}
@@ -126,6 +126,7 @@
     \centerline{\Large{\bf Taro Tsukuba}}
     \clearpage
 
+
 \newpage
 
 \chapter*{Abstract}
@@ -133,7 +134,8 @@
 The text of your abstract. The text of your abstract. The text of your
 abstract. The text of your abstract. The text of your abstract. The text
 of your abstract. The text of your abstract.
-
+ % abstract: |
+ %  The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract.
 
 \noindent%
 {\it Keywords:} 3 to 6 keywords, that do not appear in the title
@@ -224,9 +226,9 @@ sections but this sample RMarkdown files mainly use
   References
 \end{itemize}
 
-If you want to add section (i.e., Introduction in Chapter 2), then add
-\texttt{\textbackslash{}section} function after
-\texttt{\textbackslash{}chapter\{Chapter\ 2\}} like belows.
+If you want to add section in the chapter (i.e., Introduction in Chapter
+2), then add \texttt{\textbackslash{}section} function after
+\texttt{\textbackslash{}chapter\{Chapter\ 2\}} like below.
 
 \section{Introduction in Chapter 2}
 
@@ -256,11 +258,20 @@ You can use figures and tables using markdown notation or R chunk.
 \caption{mtcars plot}
 \end{figure}
 
-\hypertarget{a-tibble-3-x-3}{%
-\section{A tibble: 3 x 3}\label{a-tibble-3-x-3}}
+\begin{longtable}[]{@{}lrr@{}}
+\toprule
+Species & Sepal\_Length\_Mean & Sepal\_Width\_Mean \\
+\midrule
+\endhead
+setosa & 5.006 & 3.428 \\
+versicolor & 5.936 & 2.770 \\
+virginica & 6.588 & 2.974 \\
+\bottomrule
+\end{longtable}
 
-Species Sepal\_Length\_Mean Sepal\_Width\_Mean 1 setosa 5.01 3.43 2
-versicolor 5.94 2.77 3 virginica 6.59 2.97
+\texttt{knitr::kable()} is now unusable (please check the issue:
+https://github.com/rstudio/rticles/issues/93). I will modify the package
+Tsukubamd BP asap.
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm

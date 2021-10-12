@@ -93,7 +93,7 @@ iris %>% group_by(Species) %>%
   summarize(Sepal_Length_Mean=mean(Sepal.Length),
             Sepal_Width_Mean=mean(Sepal.Width)) %>% 
   as_tibble() %>% 
-  print()
+  knitr::kable()
 ```
 
 `knitr::kable()` is now unusable (please check the issue: https://github.com/rstudio/rticles/issues/93). I will modify the package Tsukubamd BP asap.
