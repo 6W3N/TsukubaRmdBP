@@ -16,9 +16,10 @@ abstract: |
   The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. 
 
 bibliography: bibliography.bib
-output: TsukubaRmdBP::tsukuba_format:
-      includes:
-        in_header: preamble.tex
+output: TsukubaRmdBP::tsukuba_format
+  # :
+  #     includes:
+  #     in_header: preamble.tex
 ---
 
 \tableofcontents
@@ -86,22 +87,16 @@ plot(cars)
 plot(mpg ~ hp, mtcars)
 ```
 
-# ```{r iris, echo=FALSE, warning=FALSE, message=FALSE, results="asis", fig.cap="iris summary table"}
-# library(tidyverse)
-# iris %>% group_by(Species) %>% 
-#   summarize(Sepal_Length_Mean=mean(Sepal.Length),
-#             Sepal_Width_Mean=mean(Sepal.Width)) %>% 
-#   as_tibble() %>% 
-#   print()
-# ```
+```{r iris, echo=FALSE, warning=FALSE, message=FALSE, results="asis", fig.cap="iris summary table"}
+library(tidyverse)
+iris %>% group_by(Species) %>% 
+  summarize(Sepal_Length_Mean=mean(Sepal.Length),
+            Sepal_Width_Mean=mean(Sepal.Width)) %>% 
+  as_tibble() %>% 
+  print()
+```
 
-
-<!-- |  TH  |  TH  | -->
-<!-- | ---- | ---- | -->
-<!-- |  TD  |  TD  | -->
-<!-- |  TD  |  TD  | -->
-
-
+`knitr::kable()` is now unusable (please check the issue: https://github.com/rstudio/rticles/issues/93). I will modify the package Tsukubamd BP asap.
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
