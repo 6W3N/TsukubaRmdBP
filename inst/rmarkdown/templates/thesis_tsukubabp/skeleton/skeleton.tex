@@ -16,7 +16,7 @@
 
 %\pdfminorversion=4
 % NOTE: To produce blinded version, replace "0" with "1" below.
-\newcommand{\blind}{$blinded$}
+\newcommand{\blind}{0}
 
 % DON'T change margins - should be 1 inch all around.
 \addtolength{\oddsidemargin}{-.5in}%
@@ -32,22 +32,17 @@
 
 
 %% load any required packages here
-$preamble$
 
-$if(highlighting-macros)$
-$highlighting-macros$
-$endif$
+
 
 % Pandoc citation processing
-$if(csl-refs)$
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 % for Pandoc 2.8 to 2.10.1
 \newenvironment{cslreferences}%
-  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {}%
   {\par}
 % For Pandoc 2.11+
 \newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
@@ -66,11 +61,7 @@ $if(csl-refs)$
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-$endif$
 
-$for(header-includes)$
-$header-includes$
-$endfor$
 
 \begin{document}
 
@@ -83,14 +74,12 @@ $endfor$
 
 \if0\blind
 {
-  \title{\bf $title$}
+  \title{\bf Title here}
 
   \author{
-    $for(authors)$
-    $authors.name$ $if(authors.thanks)$\thanks{$authors.thanks$} $endif$\\
-    $authors.affiliation$\\
-    $sep$ and \\ $endfor$
-  }
+        Author 1 \thanks{The authors gratefully acknowledge \ldots{}} \\
+    Department of YYY, University of XXX\\
+      }
   \maketitle
 } \fi
 
@@ -100,30 +89,94 @@ $endfor$
   \bigskip
   \bigskip
   \begin{center}
-    {\LARGE\bf $title$}
+    {\LARGE\bf Title here}
   \end{center}
   \medskip
 } \fi
 
-\newpage
+\bigskip
+\begin{abstract}
 
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-$abstract$
- % abstract: |
- %  The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract.
+\end{abstract}
 
 \noindent%
-{\it Keywords:} $for(keywords)$$keywords$$sep$, $endfor$
+{\it Keywords:} 3 to 6 keywords, that do not appear in the title
 \vfill
 
 \newpage
 \spacingset{1.45} % DON'T change the spacing!
 
-$body$
+\chapter*{General Introduction}
+\addcontentsline{toc}{chapter}{General Introduction} \parindent=5.3mm
+
+This template demonstrates some of the basic latex you'll need to know
+to create a MT or DT in Tsukuba Univ. BP.
+\href{https://bookdown.org/yihui/rmarkdown-cookbook/}{RMarkdown Cook
+Book} will answer the almost question you have.
+
+\section{Section 1}
+\label{Section1}
+
+This section will be just provide the reference examples. You can add
+references by adding \texttt{@hogehoge} in RMarkdown files .bib file. A
+simple way to make a .bib file is to use google scholar(see
+\href{https://digitalmeasures.oregonstate.edu/training/export-bibtex-google-scholar}{here}
+or
+\href{http://ajdkbsuvi.blogspot.com/2011/02/google-scholarbibtex.html}{here}).
+
+Campbell and Austin (2002) Schubert et al. (2013; Chi, Feltovich, and
+Glaser 1981)
+
+The quick brown fox jumped over the lazy dog. The quick brown fox jumped
+over the lazy dog. The quick brown fox jumped over the lazy dog. The
+quick brown fox jumped over the lazy dog.
+
+\section{Section 2}
+\label{Section2}
+
+The quick brown fox jumped over the lazy dog. The quick brown fox jumped
+over the lazy dog. The quick brown fox jumped over the lazy dog. The
+quick brown fox jumped over the lazy dog.
+
+\chapter*{General Discussion}
+\addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
+
+\section{Verifications}
+\label{sec:verify}
+
+This section will be just long enough to illustrate what a full page of
+text looks like, for margins and spacing.
+
+Campbell and Austin (2002) Schubert et al. (2013; Chi, Feltovich, and
+Glaser 1981)
+
+The quick brown fox jumped over the lazy dog. The quick brown fox jumped
+over the lazy dog. The quick brown fox jumped over the lazy dog. The
+quick brown fox jumped over the lazy dog. \textbf{With this spacing we
+have 30 lines per page.}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Campbell02}{}}%
+Campbell, Jamie I. D., and Shauna Austin. 2002. {``Effects of Response
+Time Deadlines on Adults' Strategy Choices for Simple Addition.''}
+\emph{Memory \& Cognition} 30 (6): 988--94.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Chi81}{}}%
+Chi, Michelene T. H., Paul J. Feltovich, and Robert Glaser. 1981.
+{``Categorization and Representation of Physics Problems by Experts and
+Novices.''} \emph{Cognitive Science} 5 (2): 121--52.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Schubert13}{}}%
+Schubert, Christiane C, T Kent Denmark, Beth Crandall, Anna Grome, and
+James Pappas. 2013. {``Characterizing Novice-Expert Differences in
+Macrocognition: An Exploratory Study of Cognitive Work in the Emergency
+Department.''} \emph{Annals of Emergency Medicine} 61 (1): 96--109.
+
+\end{CSLReferences}
 
 \bibliographystyle{agsm}
-\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+\bibliography{bibliography.bib}
 
 \end{document}
 
