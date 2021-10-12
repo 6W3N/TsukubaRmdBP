@@ -1,5 +1,6 @@
 % !TeX program = pdfLaTeX
-\documentclass[12pt]{article}
+% \documentclass[12pt]{article}
+\documentclass[12pt, a4paper]{report} % fot TsukubaBP
 \usepackage{amsmath}
 \usepackage{graphicx,psfrag,epsf}
 \usepackage{enumerate}
@@ -9,6 +10,9 @@
 \usepackage{hyperref}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{setspace} % for TsukubaBP
+\setstretch{1.6}      % for TsukubaBP
+\usepackage{seqsplit} % for TsukubaBP
 
 %\pdfminorversion=4
 % NOTE: To produce blinded version, replace "0" with "1" below.
@@ -20,11 +24,11 @@
 \addtolength{\textwidth}{1in}%
 \addtolength{\textheight}{1.3in}%
 \addtolength{\topmargin}{-.8in}%
-% \addtolength{\oddsidemargin}{0cm}%
-% \addtolength{\evensidemargin}{0cm}%
-% \addtolength{\textwidth}{16cm}%
-% \addtolength{\textheight}{23.7cm}%
-% \addtolength{\topmargin}{-45pt}%
+% \addtolength{\oddsidemargin}{0cm}   % for TsukubaBP
+% \addtolength{\evensidemargin}{0cm}  % for TsukubaBP
+% \addtolength{\textwidth}{16cm}      % for TsukubaBP
+% \addtolength{\textheight}{23.7cm}   % for TsukubaBP
+% \addtolength{\topmargin}{-45pt}     % for TsukubaBP
 
 
 %% load any required packages here
