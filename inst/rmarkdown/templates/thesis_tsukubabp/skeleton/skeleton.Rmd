@@ -72,7 +72,7 @@ The both `\chapter` and `\section` functions provide the numbering sections but 
 - General Discussion
 - References
 
-If you want to add section (i.e., Introduction in Chapter 2), then add `\section` function after `\chapter{Chapter 2}` like belows.
+If you want to add section in the chapter (i.e., Introduction in Chapter 2), then add `\section` function after `\chapter{Chapter 2}` like below.
 
 \section{Introduction in Chapter 2}
 
