@@ -78,22 +78,25 @@ We can create figures from R chunk. Also by setting the file path in LaTeX or ma
 library(tidyverse)
 ```
 
-\newpage
+\clearpage
+
 ```{r cars, echo=FALSE, fig.cap = "cars plot"}
 plot(cars)
 ```
 
-\newpage
+\clearpage
+
 ```{r mtcars, echo=FALSE, fig.cap = "mtcars plot"}
 plot(mpg ~ hp, mtcars)
 ```
 
-\newpage
+\clearpage
+
 ```{r iris, echo=FALSE, fig.cap = "iris table"}
 iris %>% group_by(Species) %>% 
   summarize(Sepal_Length_Mean=mean(Sepal.Length),
             Sepal_Width_Mean=mean(Sepal.Width)) %>% 
-  knitr::kable()
+  knitr::kable(caption = "iris table")
 ```
 
 CAUTION: You should insert ALL figures and tables after main documents when finally submission. 

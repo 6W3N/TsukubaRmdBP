@@ -11,7 +11,7 @@
 \usepackage{longtable}  % additional package
 \usepackage{booktabs}   % additional package
 \usepackage{cleveref}   % additional package
-\crefname{table}{Table}{Tables}{longtable}
+\crefname{table}{Table}{Tables}
 \crefname{figure}{Fig.}{Figs.}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -202,7 +202,7 @@ We can create figures from R chunk. Also by setting the file path in
 LaTeX or markdown notation, you show the figures made by other program,
 i.e., excel.
 
-\newpage
+\clearpage
 
 \begin{figure}
 \centering
@@ -210,7 +210,7 @@ i.e., excel.
 \caption{cars plot}
 \end{figure}
 
-\newpage
+\clearpage
 
 \begin{figure}
 \centering
@@ -218,9 +218,14 @@ i.e., excel.
 \caption{mtcars plot}
 \end{figure}
 
-\newpage
+\clearpage
 
 \begin{longtable}[]{@{}lrr@{}}
+\caption{iris table}\tabularnewline
+\toprule
+Species & Sepal\_Length\_Mean & Sepal\_Width\_Mean \\
+\midrule
+\endfirsthead
 \toprule
 Species & Sepal\_Length\_Mean & Sepal\_Width\_Mean \\
 \midrule
