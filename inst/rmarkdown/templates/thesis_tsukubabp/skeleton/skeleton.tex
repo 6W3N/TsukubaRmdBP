@@ -32,6 +32,46 @@
 %% load any required packages here
 
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 % Pandoc citation processing
 \newlength{\csllabelwidth}
@@ -75,8 +115,8 @@
 %  \title{\bf Title here}
 
 % \author{
-%   %   Taro Tsukuba \\
-%   Department of YYY, University of XXX\\
+%   %    \\
+%   \\
 %   % }
 
     \thispagestyle{empty}
@@ -90,9 +130,11 @@
     \centerline{the Doctoral Program in Biology,}\par
     \centerline{the University of Tsukuba}\par
     \centerline{in Partial Fulfillment of the Requirements}\par
+    \centerline{for the Degree of Master of Science}\par
+    %\centerline{( Doctoral Program in Integrative Environmental Sciences )}\par
 
     \vspace{2cm}
-    \centerline{\Large{\bf }}
+    \centerline{\Large{\bf Taro Tsukuba}}
     \clearpage
 
 % } \fi
@@ -212,6 +254,57 @@ If you want to add section (i.e., Introduction in Chapter 2), then add
 \texttt{\textbackslash{}chapter\{Chapter\ 2\}} like belows.
 
 \section{Introduction in Chapter 2}
+
+You can use figures and tables using markdown notation or R chunk.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(cars)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\includegraphics{skeleton_files/figure-latex/cars-1.pdf}
+\caption{cars plot}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ hp, mtcars)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\includegraphics{skeleton_files/figure-latex/mtcars-1.pdf}
+\caption{mtcars plot}
+\end{figure}
+
+\hypertarget{a-tibble-3-x-3}{%
+\section{A tibble: 3 x 3}\label{a-tibble-3-x-3}}
+
+Species Sepal\_Length\_Mean Sepal\_Width\_Mean 1 setosa 5.01 3.43 2
+versicolor 5.94 2.77 3 virginica 6.59 2.97
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(mtcars[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lrrrrr@{}}
+\toprule
+& mpg & cyl & disp & hp & drat \\
+\midrule
+\endhead
+Mazda RX4 & 21.0 & 6 & 160 & 110 & 3.90 \\
+Mazda RX4 Wag & 21.0 & 6 & 160 & 110 & 3.90 \\
+Datsun 710 & 22.8 & 4 & 108 & 93 & 3.85 \\
+Hornet 4 Drive & 21.4 & 6 & 258 & 110 & 3.08 \\
+Hornet Sportabout & 18.7 & 8 & 360 & 175 & 3.15 \\
+\bottomrule
+\end{longtable}
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm

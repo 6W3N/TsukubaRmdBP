@@ -77,19 +77,6 @@ $endfor$
 {#1}\small\normalsize} \spacingset{1}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \if0\blind
-% {
-%  \title{\bf $title$}
-
-% \author{
-%   $for(authors)$
-%   $authors.name$ $if(authors.thanks)$\thanks{$authors.thanks$} $endif$\\
-%   $authors.affiliation$\\
-%   $sep$ and \\ $endfor$
-% }
-
     \thispagestyle{empty}
     \vspace*{30mm}
     \begin{center}
@@ -108,26 +95,12 @@ $endfor$
     \centerline{\Large{\bf $authors$}}
     \clearpage
 
-% } \fi
-
-% \if1\blind
-% {
-%   \bigskip
-%   \bigskip
-%   \bigskip
-%   \begin{center}
-%     {\LARGE\bf $title$}
-%   \end{center}
-%   \medskip
-% } \fi
-
 \newpage
 
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 $abstract$
- % abstract: |
- %  The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract.
+
 
 \noindent%
 {\it Keywords:} $for(keywords)$$keywords$$sep$, $endfor$
@@ -142,106 +115,3 @@ $body$
 \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
 
 \end{document}
-
-
-
-% %% Tsukuba Format -- BEGIN --
-% \documentclass[a4paper, 12pt]{article}
-% \usepackage{setspace}
-% \setstretch{1.6}
-% \usepackage{seqsplit}
-% \setlength{\topmargin}{-45pt}
-% \setlength{\oddsidemargin}{0cm}
-% \setlength{\evensidemargin}{0cm}
-% \setlength{\textheight}{23.7cm}
-% \setlength{\textwidth}{16cm}
-% \usepackage{graphicx}
-% \usepackage[dvipdfmx,setpagesize=false]{hyperref}
-% \usepackage{cleveref}
-% \crefname{table}{Table}{Tables}
-% \crefname{figure}{Fig.}{Figs.}
-% \usepackage[style=chicago-authordate,maxcitenames=2,natbib=true,backend=biber]{biblatex}
-% \addbibresource{enbn.bib}
-%
-% \usepackage{listings}
-% \lstset{
-%   basicstyle={\ttfamily\small}, %書体の指定
-%   frame=tRBl, %フレームの指定
-%   framesep=10pt, %フレームと中身（コード）の間隔
-%   breaklines=true, %行が長くなった場合の改行
-%   lineskip=-0.5ex, %行間の調整
-%   tabsize=2 %Tabを何文字幅にするかの指定
-% }
-% \crefname{lstlisting}{Listing}{Listings}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Controling Figure and Table numbering
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \makeatletter
-% \def\thetable{\thechapter.\arabic{table}}
-% \@addtoreset{table}{chapter}
-% %\def\thetable{\thesection.\arabic{table}}
-% %\@addtoreset{table}{section}
-% \makeatother
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Controling Caption Style for Figs and Tables
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \usepackage{subcaption}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Followings are main contents of your thesis.  Please use
-% %% \input command as much as possible not to destroy this
-% %% psude-style file.
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % Stop Hyphernation
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \hyphenpenalty=10000\relax
-% \exhyphenpenalty=10000\relax
-% \sloppy
-% %
-% \begin{document}
-% \begin{flushleft}
-% \setlength{\parindent}{12pt}
-% %
-% \input{cover}
-% %
-% \pagenumbering{roman}
-% %
-% \input{abstract}
-% \setcounter{chapter}{0}
-% %
-% \newpage
-% \tableofcontents
-% \addcontentsline{toc}{chapter}{Contents}
-% \newpage
-% \listoftables
-% \addcontentsline{toc}{chapter}{List of Tables}
-% \newpage
-% \listoffigures
-% \addcontentsline{toc}{chapter}{List of Figures}
-% \newpage
-% %\renewcommand{\lstlistlistingname}{List of Listings}
-% %\lstlistoflistings
-% \addcontentsline{toc}{chapter}{List of Listings}
-% \newpage
-% %
-% \pagenumbering{arabic}
-% \renewcommand\thefigure{\arabic{figure}}
-% \setcounter{figure}{0}
-% \renewcommand\thetable{\arabic{table}}
-% \setcounter{table}{0}
-% \renewcommand\thelstlisting{\arabic{lstlisting}}
-% \setcounter{lstlisting}{0}
-% %
-% %%
-% %% Do not touch the following settings
-% %%
-% \end{flushleft}
-% \end{document}
-%
-% %%% Local Variables:
-% %%% mode: latex
-% %%% TeX-master: t
-% %%% End:
-% %% Tsukuba Format -- END --
-%

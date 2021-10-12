@@ -16,7 +16,9 @@ abstract: |
   The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. 
 
 bibliography: bibliography.bib
-output: TsukubaRmdBP::tsukuba_format
+output: TsukubaRmdBP::tsukuba_format:
+      includes:
+        in_header: preamble.tex
 ---
 
 \tableofcontents
@@ -73,6 +75,31 @@ If you want to add section (i.e., Introduction in Chapter 2), then add `\section
 
 \section{Introduction in Chapter 2}
 
+You can use figures and tables using markdown notation or R chunk.
+
+
+```{r cars, fig.cap = "cars plot"}
+plot(cars)
+```
+
+```{r mtcars, fig.cap = "mtcars plot"}
+plot(mpg ~ hp, mtcars)
+```
+
+# ```{r iris, echo=FALSE, warning=FALSE, message=FALSE, results="asis", fig.cap="iris summary table"}
+# library(tidyverse)
+# iris %>% group_by(Species) %>% 
+#   summarize(Sepal_Length_Mean=mean(Sepal.Length),
+#             Sepal_Width_Mean=mean(Sepal.Width)) %>% 
+#   as_tibble() %>% 
+#   print()
+# ```
+
+
+<!-- |  TH  |  TH  | -->
+<!-- | ---- | ---- | -->
+<!-- |  TD  |  TD  | -->
+<!-- |  TD  |  TD  | -->
 
 
 
