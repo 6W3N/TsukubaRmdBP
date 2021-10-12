@@ -15,8 +15,6 @@
 \usepackage{seqsplit} % for TsukubaBP
 
 %\pdfminorversion=4
-% NOTE: To produce blinded version, replace "0" with "1" below.
-\newcommand{\blind}{0}
 
 % DON'T change margins - should be 1 inch all around.
 \addtolength{\oddsidemargin}{-.5in}%
@@ -71,28 +69,40 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \if0\blind
+% {
+%  \title{\bf Title here}
 
-\if0\blind
-{
-  \title{\bf Title here}
+% \author{
+%   %   Taro Tsukuba \\
+%   Department of YYY, University of XXX\\
+%   % }
 
-  \author{
-        Author 1 \thanks{The authors gratefully acknowledge \ldots{}} \\
-    Department of YYY, University of XXX\\
-      }
-  \maketitle
-} \fi
+    \thispagestyle{empty}
+    \vspace*{30mm}
+    \begin{center}
+    \LARGE{\bf Title here}
+    \end{center}
 
-\if1\blind
-{
-  \bigskip
-  \bigskip
-  \bigskip
-  \begin{center}
-    {\LARGE\bf Title here}
-  \end{center}
-  \medskip
-} \fi
+    \vspace{6cm}
+    \centerline{A Dissertation Submitted to}\par
+    \centerline{the Doctoral Program in Biology,}\par
+    \centerline{the University of Tsukuba}\par
+    \centerline{in Partial Fulfillment of the Requirements}\par
+
+% } \fi
+
+% \if1\blind
+% {
+%   \bigskip
+%   \bigskip
+%   \bigskip
+%   \begin{center}
+%     {\LARGE\bf Title here}
+%   \end{center}
+%   \medskip
+% } \fi
 
 \newpage
 
@@ -195,14 +205,16 @@ sections but this sample RMarkdown files mainly use
 
 If you want to add section (i.e., Introduction in Chapter 2), then add
 \texttt{\textbackslash{}section} function after
-\texttt{\textbackslash{}chapter\{Chapter\ 2\}}.
-
-Like this.
+\texttt{\textbackslash{}chapter\{Chapter\ 2\}} like belows.
 
 \section{Introduction in Chapter 2}
 
 \chapter*{General Discussion}
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
+
+\chapter*{Acknowledgement}
+
+The authors gratefully acknowledge \ldots{}
 
 \chapter*{References}
 
