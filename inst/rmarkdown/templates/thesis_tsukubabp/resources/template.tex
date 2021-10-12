@@ -15,8 +15,6 @@
 \usepackage{seqsplit} % for TsukubaBP
 
 %\pdfminorversion=4
-% NOTE: To produce blinded version, replace "0" with "1" below.
-\newcommand{\blind}{$blinded$}
 
 % DON'T change margins - should be 1 inch all around.
 \addtolength{\oddsidemargin}{-.5in}%
@@ -80,30 +78,42 @@ $endfor$
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \if0\blind
+% {
+%  \title{\bf $title$}
 
-\if0\blind
-{
-  \title{\bf $title$}
+% \author{
+%   $for(authors)$
+%   $authors.name$ $if(authors.thanks)$\thanks{$authors.thanks$} $endif$\\
+%   $authors.affiliation$\\
+%   $sep$ and \\ $endfor$
+% }
 
-  \author{
-    $for(authors)$
-    $authors.name$ $if(authors.thanks)$\thanks{$authors.thanks$} $endif$\\
-    $authors.affiliation$\\
-    $sep$ and \\ $endfor$
-  }
-  \maketitle
-} \fi
+    \thispagestyle{empty}
+    \vspace*{30mm}
+    \begin{center}
+    \LARGE{\bf $title$}
+    \end{center}
 
-\if1\blind
-{
-  \bigskip
-  \bigskip
-  \bigskip
-  \begin{center}
-    {\LARGE\bf $title$}
-  \end{center}
-  \medskip
-} \fi
+    \vspace{6cm}
+    \centerline{A Dissertation Submitted to}\par
+    \centerline{the Doctoral Program in Biology,}\par
+    \centerline{the University of Tsukuba}\par
+    \centerline{in Partial Fulfillment of the Requirements}\par
+
+% } \fi
+
+% \if1\blind
+% {
+%   \bigskip
+%   \bigskip
+%   \bigskip
+%   \begin{center}
+%     {\LARGE\bf $title$}
+%   \end{center}
+%   \medskip
+% } \fi
 
 \newpage
 

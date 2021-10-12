@@ -5,8 +5,7 @@ title: Title here
 blinded: 0
 
 authors: 
-- name: Author 1
-  thanks: The authors gratefully acknowledge ...
+- name: Taro Tsukuba
   affiliation: Department of YYY, University of XXX
 
 keywords:
@@ -81,6 +80,8 @@ If you want to add section (i.e., Introduction in Chapter 2), then add `\section
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
 
 
+\chapter*{Acknowledgement}
+The authors gratefully acknowledge ...
 
 
 \chapter*{References}
