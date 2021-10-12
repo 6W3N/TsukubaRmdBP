@@ -1,3 +1,5 @@
+### All functions except tsukuba_format() are from rticles package.
+
 #' @title Helper function to package template 1
 #' @export
 pkg_file <- function(...) system.file(..., package = "rticles")
