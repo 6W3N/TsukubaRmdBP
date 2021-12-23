@@ -207,8 +207,10 @@ i.e., excel.
 
 \clearpage
 
-\renewcommand{\thetable}{\arabic{figure}}
-\renewcommand{\thefigure}{\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\arabic{table}}
 
 \begin{figure}
 \centering
