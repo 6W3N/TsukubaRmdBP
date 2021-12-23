@@ -108,6 +108,9 @@ of your abstract. The text of your abstract.
 \newpage
 \spacingset{1.45} % DON'T change the spacing!
 
+%\setcounter{figure}{0}
+%\renewcommand{\thefigure}{\arabic{figure}}
+
 \tableofcontents
 \addcontentsline{toc}{chapter}{Contents}
 \newpage
@@ -204,6 +207,9 @@ i.e., excel.
 
 \clearpage
 
+\renewcommand{\thetable}{\arabic{figure}}
+\renewcommand{\thefigure}{\arabic{table}}
+
 \begin{figure}
 \centering
 \includegraphics{Untitled_files/figure-latex/cars-1.pdf}
@@ -266,9 +272,6 @@ Winfree, Arthur T. 1975. {``Unclocklike Behaviour of Biological
 Clocks.''} \emph{Nature} 253 (5490): 315--19.
 
 \end{CSLReferences}
-\setcounter{figure}{0}
-\renewcommand{\thefigure}{\arabic{figure}}
-
 
 \bibliographystyle{agsm}
 \bibliography{bibliography.bib}

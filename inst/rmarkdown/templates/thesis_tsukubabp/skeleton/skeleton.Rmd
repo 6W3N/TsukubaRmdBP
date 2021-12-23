@@ -82,8 +82,10 @@ library(bookdown)
 \clearpage
 
 ```{=latex}
-\renewcommand{\thetable}{\arabic{figure}}
-\renewcommand{\thefigure}{\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\arabic{table}}
 ```
 
 ```{r cars, echo=FALSE, fig.cap = "cars plot", section_number = "no"}
