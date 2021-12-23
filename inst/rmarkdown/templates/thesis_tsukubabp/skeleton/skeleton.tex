@@ -202,10 +202,10 @@ We can create figures from R chunk. Also by setting the file path in
 LaTeX or markdown notation, you show the figures made by other program,
 i.e., excel.
 
-\clearpage
-
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{\arabic{figure}}
+
+\clearpage
 
 \begin{figure}
 \centering
@@ -222,9 +222,6 @@ i.e., excel.
 \end{figure}
 
 \clearpage
-
-\setcounter{table}{0}
-\renewcommand{\thetable}{\arabic{table}}
 
 \begin{longtable}[]{@{}lrr@{}}
 \caption{iris table}\tabularnewline

@@ -76,11 +76,12 @@ We can create figures from R chunk. Also by setting the file path in LaTeX or ma
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
+library(bookdown)
 ```
 
 \clearpage
 
-```{r cars, echo=FALSE, fig.cap = "cars plot"}
+```{r cars, echo=FALSE, fig.cap = "cars plot", section_number = "no"}
 plot(cars)
 ```
 
