@@ -113,9 +113,9 @@ CAUTION: You should insert ALL figures and tables after main documents when fina
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
 The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. 
 
-\chapter*{Acknowledgement}
+\chapter{Acknowledgement}
 The authors gratefully acknowledge ...
 
 
-\chapter*{References}
+\chapter{References}
 
