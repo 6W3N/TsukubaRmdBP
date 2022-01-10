@@ -92,16 +92,11 @@ library(bookdown)
 plot(cars)
 ```
 
-You can change the figure caption to modify the R chunk option.
-
 \clearpage
 
 ```{r mtcars, echo=FALSE, fig.cap = "mtcars plot"}
 plot(mpg ~ hp, mtcars)
 ```
-
-\noindent
-If you want to input description under figures, you should insert here.
 
 \clearpage
 
@@ -118,9 +113,9 @@ CAUTION: You should insert ALL figures and tables after main documents when fina
 \addcontentsline{toc}{chapter}{General Discussion}\parindent=5.3mm
 The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. The text of general discussion. 
 
-\chapter*{Acknowledgement}
+\chapter{Acknowledgement}
 The authors gratefully acknowledge ...
 
 
-\chapter*{References}
+\chapter{References}
 
