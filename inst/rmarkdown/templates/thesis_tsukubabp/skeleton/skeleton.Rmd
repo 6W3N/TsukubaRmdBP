@@ -12,6 +12,12 @@ keywords:
 abstract: |
   The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. The text of your abstract. 
 
+header-includes:
+   - \usepackage{lineno}
+#   - \linenumbers  #If you want to add line number, remove the comment-out of this line.
+   - \usepackage{hyperref}
+#   - \hypersetup{ pdfborder = {0 0 0}} #If you want plain cross-referencing, remove the comment-out of this line.
+
 bibliography: bibliography.bib
 output: TsukubaRmdBP::tsukuba_format
 ---

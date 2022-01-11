@@ -35,9 +35,6 @@ pdf_document_format <- function(
 tsukuba_format <- function(..., keep_tex = TRUE, md_extensions = c("-autolink_bare_uris")) {
   template_tex_file <- system.file("rmarkdown/templates/thesis_tsukubabp/resources/template.tex",
                                    package = 'TsukubaRmdBP')
-  # pdf_document_format(
-  #   "thesis_tsukubabp", keep_tex = keep_tex, md_extensions = md_extensions, ...
-  # )
   pdf_document_format(
     template = template_tex_file,
     keep_tex = keep_tex,
